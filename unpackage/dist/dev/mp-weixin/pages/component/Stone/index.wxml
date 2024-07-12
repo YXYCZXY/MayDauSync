@@ -1,0 +1,1 @@
+<view class="content head-bg"><view class="text-area"><text class="title">{{title}}</text></view><tab-bar class="bom-tabbar" vue-id="74a143d9-1" pagePath="/pages/Stone/index" bind:__l="__l"></tab-bar></view>

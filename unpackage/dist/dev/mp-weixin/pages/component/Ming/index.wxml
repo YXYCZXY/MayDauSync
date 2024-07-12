@@ -1,0 +1,1 @@
+<view class="content head-bg"><view class="text-area"><text class="title">{{title}}</text></view><tab-bar class="bom-tabbar" vue-id="b82f193a-1" pagePath="/pages/Ming/index" bind:__l="__l"></tab-bar></view>

@@ -1,0 +1,15 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "component_Monster": "/pages/component/Monster/index",
+    "component_Masa": "/pages/component/Masa/index",
+    "component_Ashin": "/pages/component/Ashin/index",
+    "component_Stone": "/pages/component/Stone/index",
+    "component_Ming": "/pages/component/Ming/index",
+    "component_-monster": "/pages/component/Monster/index",
+    "component_-masa": "/pages/component/Masa/index",
+    "component_-ashin": "/pages/component/Ashin/index",
+    "component_-stone": "/pages/component/Stone/index",
+    "component_-ming": "/pages/component/Ming/index"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="content head-bg"><view class="text-area"><text class="title">{{title}}</text></view><tab-bar class="bom-tabbar" vue-id="2f5f1ef8-1" pagePath="/pages/Monster/index" bind:__l="__l"></tab-bar></view>
