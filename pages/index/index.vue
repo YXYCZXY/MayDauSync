@@ -1,5 +1,5 @@
 <template>
-    <view>
+    <view :class="className">
         <!-- 组件显示 -->
         <view v-if="!(currentTab == 0 ? false : true)">
             <component_Monster />
@@ -19,10 +19,10 @@
 
         <!-- 自定义 tabbar -->
         <view class="nav-tabs">
-            <view :class="'tab-list '+ (currentTab == idx ? 'active' : 'default')" :data-current="idx" @tap="swichNav" v-for="(item, idx) in items" :key="idx">
+            <view :class="'tab-list '+ (currentTab == idx ? 'active' : 'default')" :data-current="idx"  @tap="swichNav" v-for="(item, idx) in items" :key="idx">
                 <!-- <text class="tab-text" :data-current="idx" :src="currentTab == idx ? item.selectedIconPath : item.iconPath">{{ item.text }}</text> -->
-
-                <image :class="'iconPath ' + 'bounce' + idx + ' '+ (idx == 2 ? 'bigimg' : '') "  :data-current="idx" :src="currentTab == idx ? item.selectedIconPath : item.iconPath"></image>
+				<image :class="'iconPath '+ (idx == currentTab ? 'bigimg' : '') "  :data-current="idx" :data-class="item.className" :src="currentTab == idx ? item.selectedIconPath : item.iconPath"></image>
+                <!-- <image :class="'iconPath ' + 'bounce' + idx + ' '+ (idx == 2 ? 'bigimg' : '') "  :data-current="idx" :src="currentTab == idx ? item.selectedIconPath : item.iconPath"></image> -->
             </view>
         </view>
     </view>
@@ -46,32 +46,38 @@ export default {
     },
     data() {
         return {
-            currentTab: 0,
+            currentTab: 2,
+			className:'head-bg-as',
             items: [
                 {
                     iconPath: '/static/pages/img/bar-gs.png',
                     selectedIconPath: '/static/pages/img/bar-gs.png',
-                    text: 'Monster'
+                    text: 'Monster',
+						className:"head-bg-gs"
                 },
                 {
                     iconPath: '/static/pages/img/bar-ms.png',
                     selectedIconPath: '/static/pages/img/bar-ms.png',
-                    text: 'Masa'
+                    text: 'Masa',
+						className:"head-bg-ms"
                 },
                 {
                     iconPath: '/static/pages/img/bar-as.png',
                     selectedIconPath: '/static/pages/img/bar-as.png',
-                    text: 'Ashin'
+                    text: 'Ashin',
+						className:"head-bg-as"
                 },
                 {
                     iconPath: '/static/pages/img/bar-st.png',
                     selectedIconPath: '/static/pages/img/bar-st.png',
-                    text: 'Stone'
+                    text: 'Stone',
+						className:"head-bg-st"
                 },
                 {
                     iconPath: '/static/pages/img/bar-gy.png',
                     selectedIconPath: '/static/pages/img/bar-gy.png',
-                    text: 'Ming'
+                    text: 'Ming',
+						className:"head-bg-gy"
                 }
             ]
         };
@@ -79,12 +85,14 @@ export default {
     onLoad: function (option) {},
     methods: {
         swichNav: function (e) {
+			console.log(e);
             let that = this;
             if (this.currentTab === e.target.dataset.current) {
                 return false;
             } else {
                 that.setData({
-                    currentTab: e.target.dataset.current
+                    currentTab: e.target.dataset.current,
+					className: e.target.dataset.class
                 });
             }
         }
@@ -137,6 +145,32 @@ export default {
 	    }
 	}
 /**index.wxss**/
+.head-bg-gs{
+  height: 100vh;
+	  background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/monster.jpg?sign=038fccdf32268b6c5b7c551c1da985ca&t=1720706816');
+	  background-size: 100% 100%;
+}
+.head-bg-ms{
+  height: 100vh;
+	  background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/masa.jpg?sign=ddc79f64ab1aaa0b0f72d6df8a862a9f&t=1720706679');
+	  background-size: 100% 100%;
+}
+.head-bg-as{
+  height: 100vh;
+	  background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/ashin.jpg?sign=2928ff9272259a84b96506fe0716a394&t=1720705784');
+	  background-size: 100% 100%;
+}
+.head-bg-st{
+	  height: 100vh;
+	  background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/stone.jpg?sign=69a7c733feb217f94b90a3a6462a4639&t=1720705799');
+	  background-size: 100% 100%;
+}
+.head-bg-gy{
+  height: 100vh;
+	  background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/ming.jpg?sign=9b22b6362a67c1fe1772920f02aa0571&t=1720705760');
+	  background-size: 100% 100%;
+}
+	
 page {
     display: flex;
     flex-direction: column;
@@ -155,7 +189,7 @@ page {
     align-items: center;
     justify-content: center;
     flex-direction: column-reverse;
-    background: #fcfcfc;
+    // background: #fcfcfc;
     height: 120rpx;
 
 }

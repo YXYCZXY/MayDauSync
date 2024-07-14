@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "uni-row": "/uni_modules/uni-row/components/uni-row/uni-row",
+    "uni-col": "/uni_modules/uni-row/components/uni-col/uni-col",
+    "sync-card": "/components/sync-card/sync-card"
+  },
   "component": true
 }

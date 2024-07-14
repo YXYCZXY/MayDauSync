@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"pages/component/Ashin/index":1,"pages/component/Masa/index":1,"pages/component/Ming/index":1,"pages/component/Monster/index":1,"pages/component/Stone/index":1};
+/******/ 		var cssChunks = {"pages/component/Ashin/index":1,"pages/component/Masa/index":1,"pages/component/Ming/index":1,"pages/component/Monster/index":1,"pages/component/Stone/index":1,"components/sync-card/sync-card":1,"uni_modules/uni-row/components/uni-col/uni-col":1,"uni_modules/uni-row/components/uni-row/uni-row":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"pages/component/Ashin/index":"pages/component/Ashin/index","pages/component/Masa/index":"pages/component/Masa/index","pages/component/Ming/index":"pages/component/Ming/index","pages/component/Monster/index":"pages/component/Monster/index","pages/component/Stone/index":"pages/component/Stone/index"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"pages/component/Ashin/index":"pages/component/Ashin/index","pages/component/Masa/index":"pages/component/Masa/index","pages/component/Ming/index":"pages/component/Ming/index","pages/component/Monster/index":"pages/component/Monster/index","pages/component/Stone/index":"pages/component/Stone/index","components/sync-card/sync-card":"components/sync-card/sync-card","uni_modules/uni-row/components/uni-col/uni-col":"uni_modules/uni-row/components/uni-col/uni-col","uni_modules/uni-row/components/uni-row/uni-row":"uni_modules/uni-row/components/uni-row/uni-row"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

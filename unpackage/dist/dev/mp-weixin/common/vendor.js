@@ -780,8 +780,8 @@ function populateParameters(result) {
     appVersion: "1.0.0",
     appVersionCode: "100",
     appLanguage: getAppLanguage(hostLanguage),
-    uniCompileVersion: "4.15",
-    uniRuntimeVersion: "4.15",
+    uniCompileVersion: "4.23",
+    uniRuntimeVersion: "4.23",
     uniPlatform: undefined || "mp-weixin",
     deviceBrand: deviceBrand,
     deviceModel: model,
@@ -9466,9 +9466,9 @@ internalMixin(Vue);
 
 /***/ }),
 /* 26 */
-/*!****************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/pages.json ***!
-  \****************************************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/pages.json ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9612,9 +9612,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 33 */
-/*!************************************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/uni_modules/zp-mixins/index.js ***!
-  \************************************************************************************/
+/*!**************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/uni_modules/zp-mixins/index.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9660,9 +9660,9 @@ exports.default = _default;
 
 /***/ }),
 /* 34 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/uni_modules/zp-mixins/lifecycle/pageLifetimes.js ***!
-  \******************************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/uni_modules/zp-mixins/lifecycle/pageLifetimes.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9707,9 +9707,9 @@ exports.pageLifetimes = pageLifetimes;
 
 /***/ }),
 /* 35 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/uni_modules/zp-mixins/methods/clone.js ***!
-  \********************************************************************************************/
+/*!**********************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/uni_modules/zp-mixins/methods/clone.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9733,9 +9733,9 @@ function clone(target) {
 
 /***/ }),
 /* 36 */
-/*!**********************************************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/uni_modules/zp-mixins/methods/dataset.js ***!
-  \**********************************************************************************************/
+/*!************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/uni_modules/zp-mixins/methods/dataset.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9771,9 +9771,9 @@ function handleDataset(event) {
 
 /***/ }),
 /* 37 */
-/*!*********************************************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/uni_modules/zp-mixins/methods/escape.js ***!
-  \*********************************************************************************************/
+/*!***********************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/uni_modules/zp-mixins/methods/escape.js ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9823,9 +9823,9 @@ function html2Escape(sHtml) {
 
 /***/ }),
 /* 38 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/uni_modules/zp-mixins/methods/event.js ***!
-  \********************************************************************************************/
+/*!**********************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/uni_modules/zp-mixins/methods/event.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9849,9 +9849,9 @@ function parseEventDynamicCode(e, exp) {
 
 /***/ }),
 /* 39 */
-/*!************************************************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/uni_modules/zp-mixins/methods/getTabBar.js ***!
-  \************************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/uni_modules/zp-mixins/methods/getTabBar.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9884,9 +9884,9 @@ function getTabBar() {
 
 /***/ }),
 /* 40 */
-/*!***********************************************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/uni_modules/zp-mixins/methods/relation.js ***!
-  \***********************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/uni_modules/zp-mixins/methods/relation.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9910,9 +9910,9 @@ function getRelationNodes(name) {
 
 /***/ }),
 /* 41 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/uni_modules/zp-mixins/methods/selectComponent.js ***!
-  \******************************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/uni_modules/zp-mixins/methods/selectComponent.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10128,9 +10128,9 @@ function selectAllComponents(args) {
 
 /***/ }),
 /* 42 */
-/*!**********************************************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/uni_modules/zp-mixins/methods/setData.js ***!
-  \**********************************************************************************************/
+/*!************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/uni_modules/zp-mixins/methods/setData.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10234,9 +10234,9 @@ function setData(obj) {
 
 /***/ }),
 /* 43 */
-/*!*****************************************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/uni_modules/zp-mixins/utils/_set.js ***!
-  \*****************************************************************************************/
+/*!*******************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/uni_modules/zp-mixins/utils/_set.js ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10278,9 +10278,9 @@ exports.default = _default;
 
 /***/ }),
 /* 44 */
-/*!*********************************************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/uni_modules/zp-mixins/utils/debounce.js ***!
-  \*********************************************************************************************/
+/*!***********************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/uni_modules/zp-mixins/utils/debounce.js ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10325,9 +10325,9 @@ exports.default = _default;
 /* 57 */,
 /* 58 */,
 /* 59 */
-/*!*******************************************************************!*\
-  !*** C:/Users/24517/Desktop/5525/wx-diy-tabbar_uni/utils/util.js ***!
-  \*******************************************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/utils/util.js ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

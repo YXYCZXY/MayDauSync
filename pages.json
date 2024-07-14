@@ -5,9 +5,9 @@
 			"style": {
 				"navigationStyle": "custom",
 				"usingComponents": {
+					"component_Ashin": "/pages/component/Ashin/index",
 					"component_Monster": "/pages/component/Monster/index",
 					"component_Masa": "/pages/component/Masa/index",
-					"component_Ashin": "/pages/component/Ashin/index",
 					"component_Stone": "/pages/component/Stone/index",
 					"component_Ming": "/pages/component/Ming/index"
 				}

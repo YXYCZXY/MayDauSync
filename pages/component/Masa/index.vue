@@ -51,7 +51,7 @@
 	}
 	.head-bg{
 	  height: 100vh;
-	  background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/masa.jpg?sign=ddc79f64ab1aaa0b0f72d6df8a862a9f&t=1720706679');
-	  background-size: 100% 100%;
+/* 	  background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/masa.jpg?sign=ddc79f64ab1aaa0b0f72d6df8a862a9f&t=1720706679');
+	  background-size: 100% 100%; */
 	}
 </style>

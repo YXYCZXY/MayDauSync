@@ -51,7 +51,7 @@
 	}
 	.head-bg{
 	  height: 100vh;
-	  background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/monster.jpg?sign=038fccdf32268b6c5b7c551c1da985ca&t=1720706816');
-	  background-size: 100% 100%;
+/* 	  background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/monster.jpg?sign=038fccdf32268b6c5b7c551c1da985ca&t=1720706816');
+	  background-size: 100% 100%; */
 	}
 </style>
