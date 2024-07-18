@@ -1,30 +1,11 @@
 <template>
 	<view class="content head-bg">
 		<view class="text-area">
-			<uni-section title="胡胡胡萝卜" type="line">
+			<uni-section :title="item.name" type="line" v-for="item in List" :key="item.name">
 				<uni-group mode="card">
 					<u-grid :border="true" col="3">
 						<!-- 注意wmls这个数组一定要是偶数 偶数的话效果会好看些 -->
-						<u-grid-item v-for="(listItem,listIndex) in wmls" :key="listIndex"
-							@click="submit('aaaa',listItem)">
-							<image class="fui-avatar__img" :src="listItem"></image>
-							<!-- <sync-card title="胡胡胡罗"  :src="listItem"></sync-card> -->
-						</u-grid-item>
-					</u-grid>
-					<u-toast ref="uToast" />
-					<!-- 							<uni-row gutter="20" class="demo-uni-row" :width="nvueWidth">
-								<uni-col :span="8" v-for="url in wmls" :key="url">
-									<sync-card title="胡胡胡罗"  :src="url"></sync-card>
-								</uni-col>
-							</uni-row> -->
-				</uni-group>
-			</uni-section>
-			
-			<uni-section title="怪怪怪怪兽" type="line">
-				<uni-group mode="card">
-					<u-grid :border="true" col="3">
-						<!-- 注意wmls这个数组一定要是偶数 偶数的话效果会好看些 -->
-						<u-grid-item v-for="(listItem,listIndex) in wmls" :key="listIndex"
+						<u-grid-item v-for="(listItem,listIndex) in item.data" :key="listIndex"
 							@click="submit('aaaa',listItem)">
 							<image class="fui-avatar__img" :src="listItem"></image>
 							<!-- <sync-card title="胡胡胡罗"  :src="listItem"></sync-card> -->
@@ -45,24 +26,28 @@
 </template>
 
 <script>
+	import {showImages} from "@/utils/ashin.js";
 	export default {
 		options: {
 			styleIsolation: 'shared'
 		},
 		data() {
 			return {
-				wmls: [
-					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls4.png?sign=84e2ea5a6171caa96c4104947f385f8f&t=1720972858',
-					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls3.png?sign=3d4f10d6f8c3697f551cc844cd7c09c4&t=1720972870',
-					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls2.png?sign=028ad74ca2fc7ead6c05423e1f007d7f&t=1720972881',
-					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls1.png?sign=b56ca9bf8420dabfba052e2a475bf6b0&t=1720972888',
-					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls1.png?sign=b56ca9bf8420dabfba052e2a475bf6b0&t=1720972888',
-					''
-				]
+				List:showImages,
+				wmls:[
+			'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls4.png?sign=84e2ea5a6171caa96c4104947f385f8f&t=1720972858',
+			'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls3.png?sign=3d4f10d6f8c3697f551cc844cd7c09c4&t=1720972870',
+			'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls2.png?sign=028ad74ca2fc7ead6c05423e1f007d7f&t=1720972881',
+			'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls1.png?sign=b56ca9bf8420dabfba052e2a475bf6b0&t=1720972888',
+			'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls1.png?sign=b56ca9bf8420dabfba052e2a475bf6b0&t=1720972888',
+			''
+		]
 			}
 		},
 		onLoad() {
-
+		},
+		mounted() {
+			console.log(showImages);
 		},
 		methods: {
 			submit(name, kind) {
@@ -109,10 +94,8 @@
 	}
 
 	.text-area {
-		padding: 10px;
 		position: absolute;
 		top: 200rpx;
-		height: 100%;
 	}
 
 	.title {

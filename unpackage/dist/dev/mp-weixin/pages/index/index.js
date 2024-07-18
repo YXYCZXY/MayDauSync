@@ -152,18 +152,18 @@ var component_Masa = function component_Masa() {
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var component_Ashin = function component_Ashin() {
-  __webpack_require__.e(/*! require.ensure | pages/component/Ashin/index */ "pages/component/Ashin/index").then((function () {
+  Promise.all(/*! require.ensure | pages/component/Ashin/index */[__webpack_require__.e("common/vendor"), __webpack_require__.e("pages/component/Ashin/index")]).then((function () {
     return resolve(__webpack_require__(/*! @/pages/component/Ashin/index */ 201));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var component_Stone = function component_Stone() {
   __webpack_require__.e(/*! require.ensure | pages/component/Stone/index */ "pages/component/Stone/index").then((function () {
-    return resolve(__webpack_require__(/*! @/pages/component/Stone/index */ 208));
+    return resolve(__webpack_require__(/*! @/pages/component/Stone/index */ 209));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var component_Ming = function component_Ming() {
   __webpack_require__.e(/*! require.ensure | pages/component/Ming/index */ "pages/component/Ming/index").then((function () {
-    return resolve(__webpack_require__(/*! @/pages/component/Ming/index */ 215));
+    return resolve(__webpack_require__(/*! @/pages/component/Ming/index */ 216));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var app = getApp();

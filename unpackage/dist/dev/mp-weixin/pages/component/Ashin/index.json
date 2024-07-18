@@ -1,10 +1,10 @@
 {
+  "component": true,
   "usingComponents": {
     "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
     "uni-group": "/uni_modules/uni-group/components/uni-group/uni-group",
     "u-grid": "/uni_modules/uview-ui/components/u-grid/u-grid",
     "u-grid-item": "/uni_modules/uview-ui/components/u-grid-item/u-grid-item",
     "u-toast": "/uni_modules/uview-ui/components/u-toast/u-toast"
-  },
-  "component": true
+  }
 }

@@ -180,31 +180,26 @@
 
 	/**index.wxss**/
 	.head-bg-gs {
-		height: 100vh;
 		background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/monster.jpg?sign=038fccdf32268b6c5b7c551c1da985ca&t=1720706816');
 		background-size: 100% 100%;
 	}
 
 	.head-bg-ms {
-		height: 100vh;
 		background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/masa.jpg?sign=ddc79f64ab1aaa0b0f72d6df8a862a9f&t=1720706679');
 		background-size: 100% 100%;
 	}
 
 	.head-bg-as {
-		height: 100vh;
 		// background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/ashin.jpg?sign=2928ff9272259a84b96506fe0716a394&t=1720705784');
 		background-size: 100% 100%;
 	}
 
 	.head-bg-st {
-		height: 100vh;
 		background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/stone.jpg?sign=69a7c733feb217f94b90a3a6462a4639&t=1720705799');
 		background-size: 100% 100%;
 	}
 
 	.head-bg-gy {
-		height: 100vh;
 		background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/ming.jpg?sign=9b22b6362a67c1fe1772920f02aa0571&t=1720705760');
 		background-size: 100% 100%;
 	}
