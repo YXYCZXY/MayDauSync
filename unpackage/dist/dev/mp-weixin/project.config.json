@@ -18,7 +18,7 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "3.4.10",
+  "libVersion": "3.5.0",
   "appid": "wx17b7950b92256fd1",
   "projectname": "zidingyitabbar",
   "condition": {},

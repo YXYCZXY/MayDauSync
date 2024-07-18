@@ -5,7 +5,9 @@ import zpMixins from '@/uni_modules/zp-mixins/index.js';
 
 // #ifndef VUE3
 import Vue from 'vue';
+import uView from '@/uni_modules/uview-ui'
 
+Vue.use(uView);
 Vue.use(zpMixins);
 
 Vue.config.productionTip = false;

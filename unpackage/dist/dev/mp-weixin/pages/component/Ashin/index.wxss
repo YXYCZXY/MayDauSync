@@ -1,38 +1,46 @@
 
-.uni-col{
-		margin-bottom: 10px;
+.u-grid-item {
+	padding: 10px;
 }
-.card--uni-card{
-		background-color: rgba(255,255,255,0.5);
+.fui-avatar__img {
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+}
+.uni-col {
+	margin-bottom: 10px;
+}
+.card--uni-card {
+	background-color: rgba(255, 255, 255, 0.5);
 }
 .content {
-		padding: 10px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
+	height: 200rpx;
+	width: 200rpx;
+	margin-top: 200rpx;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50rpx;
 }
 .text-area {
-		padding: 10px;
-		position: absolute;
-		top: 200rpx;
-		height: 100%;
+	padding: 10px;
+	position: absolute;
+	top: 200rpx;
+	height: 100%;
 }
 .title {
-		font-size: 36rpx;
-		color: #8f8f94;
+	font-size: 36rpx;
+	color: #8f8f94;
 }
-.head-bg{
-	  height: 100vh;
-/* 	  background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/ashin.jpg?sign=2928ff9272259a84b96506fe0716a394&t=1720705784');
-	  background-size: 100% 100%; */
+.head-bg {
+	height: 100vh;
+	/* 	  background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/ashin.jpg?sign=2928ff9272259a84b96506fe0716a394&t=1720705784');
+  background-size: 100% 100%; */
 }
 
