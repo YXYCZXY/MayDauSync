@@ -162,6 +162,7 @@
 
     .uni-section-content{
       font-size: 14px;
+	  padding: 10px;
     }
 	}
 </style>

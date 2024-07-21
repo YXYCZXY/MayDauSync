@@ -253,6 +253,13 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.main-wrap.data-v-57280228 {
+  padding-top: 50px;
+  height: calc(100% - 62px);
+}
+.full-bg.data-v-57280228 {
+  height: 100%;
+}
 @-webkit-keyframes bounce0-data-v-57280228 {
 0%,
   20%,
@@ -407,6 +414,7 @@
   background-size: 100% 100%;
 }
 .head-bg-as.data-v-57280228 {
+  background-image: url("https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/ashin.jpg?sign=2928ff9272259a84b96506fe0716a394&t=1720705784");
   background-size: 100% 100%;
 }
 .head-bg-st.data-v-57280228 {

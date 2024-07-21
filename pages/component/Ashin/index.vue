@@ -58,6 +58,19 @@
 </script>
 
 <style>
+	.group--uni-group{
+		background-color: rgba(255, 255, 255, 0.9);
+	}
+	.uni-section__content-title{
+		font-size: 16px!important;
+		color: #fff!important;
+	}
+	.uni-section-header{
+		padding: 0 10px!important;
+	}
+	.section--uni-section{
+		background-color: transparent;
+	}
 	.u-grid-item {
 		padding: 10px;
 	}
@@ -77,7 +90,6 @@
 	}
 
 	.content {
-		padding: 10px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -94,8 +106,10 @@
 	}
 
 	.text-area {
+		height: calc(100% - 120px);
+		overflow-x: auto;
 		position: absolute;
-		top: 200rpx;
+		/* top: 200rpx; */
 	}
 
 	.title {
@@ -104,8 +118,6 @@
 	}
 
 	.head-bg {
-		height: 100vh;
-		/* 	  background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/ashin.jpg?sign=2928ff9272259a84b96506fe0716a394&t=1720705784');
-	  background-size: 100% 100%; */
+		height: 100%;
 	}
 </style>

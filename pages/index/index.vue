@@ -1,20 +1,20 @@
 <template>
-	<view :class="className">
+	<view :class="className" class="full-bg">
 		<!-- 组件显示 -->
-		<view v-if="!(currentTab == 0 ? false : true)">
-			<component_Monster />
+		<view class="main-wrap" v-if="!(currentTab == 0 ? false : true)">
+			<component_Monster class="full-bg" />
 		</view>
-		<view v-if="!(currentTab == 1 ? false : true)">
-			<component_Masa />
+		<view class="main-wrap" v-if="!(currentTab == 1 ? false : true)">
+			<component_Masa class="full-bg" />
 		</view>
-		<view v-if="!(currentTab == 2 ? false : true)">
-			<component_Ashin />
+		<view class="main-wrap" v-if="!(currentTab == 2 ? false : true)">
+			<component_Ashin class="full-bg" />
 		</view>
-		<view v-if="!(currentTab == 3 ? false : true)">
-			<component_Stone />
+		<view class="main-wrap" v-if="!(currentTab == 3 ? false : true)">
+			<component_Stone class="full-bg" />
 		</view>
-		<view v-if="!(currentTab == 4 ? false : true)">
-			<component_Ming />
+		<view class="main-wrap" v-if="!(currentTab == 4 ? false : true)">
+			<component_Ming class="full-bg" />
 		</view>
 
 		<!-- 自定义 tabbar -->
@@ -102,6 +102,15 @@
 	};
 </script>
 <style lang="scss" scoped>
+	.main-wrap {
+		padding-top: 50px;
+		height: calc(100% - 62px);
+	}
+
+	.full-bg {
+		height: 100%;
+	}
+
 	@keyframes bounce0 {
 
 		0%,
@@ -190,7 +199,7 @@
 	}
 
 	.head-bg-as {
-		// background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/ashin.jpg?sign=2928ff9272259a84b96506fe0716a394&t=1720705784');
+		background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/ashin.jpg?sign=2928ff9272259a84b96506fe0716a394&t=1720705784');
 		background-size: 100% 100%;
 	}
 
