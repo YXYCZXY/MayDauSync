@@ -49,8 +49,8 @@
 		},
 		data() {
 			return {
-				currentTab: 2,
-				className: 'head-bg-as',
+				currentTab: 4,
+				className: 'head-bg-gy',
 				items: [{
 						iconPath: '/static/pages/img/bar-gs.png',
 						selectedIconPath: '/static/pages/img/bar-gs.png',

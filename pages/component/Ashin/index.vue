@@ -3,7 +3,20 @@
 		<view class="text-area">
 			<uni-section :title="item.name" type="line" v-for="item in List" :key="item.name">
 				<uni-group mode="card">
-					<u-grid :border="true" col="3">
+					<swiper :indicator-dots="true" class="swiper" v-if="item.swiper">
+						<swiper-item v-for="(valueItem,index) in item.data" :key="index">
+							<u-grid :border="true" col="3">
+								<!-- 注意wmls这个数组一定要是偶数 偶数的话效果会好看些 -->
+								<u-grid-item v-for="(listItem,listIndex) in valueItem" :key="listIndex"
+									@click="submit('aaaa',listItem)">
+									<image class="fui-avatar__img" :src="listItem"></image>
+									<!-- <sync-card title="胡胡胡罗"  :src="listItem"></sync-card> -->
+								</u-grid-item>
+							</u-grid>
+							<u-toast ref="uToast" />
+						</swiper-item>
+					</swiper>
+					<u-grid :border="true" col="3" v-if="!item.swiper">
 						<!-- 注意wmls这个数组一定要是偶数 偶数的话效果会好看些 -->
 						<u-grid-item v-for="(listItem,listIndex) in item.data" :key="listIndex"
 							@click="submit('aaaa',listItem)">
@@ -11,7 +24,7 @@
 							<!-- <sync-card title="胡胡胡罗"  :src="listItem"></sync-card> -->
 						</u-grid-item>
 					</u-grid>
-					<u-toast ref="uToast" />
+					<u-toast ref="uToast" v-if="!item.swiper"/>
 					<!-- 							<uni-row gutter="20" class="demo-uni-row" :width="nvueWidth">
 								<uni-col :span="8" v-for="url in wmls" :key="url">
 									<sync-card title="胡胡胡罗"  :src="url"></sync-card>
@@ -26,26 +39,27 @@
 </template>
 
 <script>
-	import {showImages} from "@/utils/ashin.js";
+	import {
+		showImages
+	} from "@/utils/ashin.js";
 	export default {
 		options: {
 			styleIsolation: 'shared'
 		},
 		data() {
 			return {
-				List:showImages,
-				wmls:[
-			'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls4.png?sign=84e2ea5a6171caa96c4104947f385f8f&t=1720972858',
-			'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls3.png?sign=3d4f10d6f8c3697f551cc844cd7c09c4&t=1720972870',
-			'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls2.png?sign=028ad74ca2fc7ead6c05423e1f007d7f&t=1720972881',
-			'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls1.png?sign=b56ca9bf8420dabfba052e2a475bf6b0&t=1720972888',
-			'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls1.png?sign=b56ca9bf8420dabfba052e2a475bf6b0&t=1720972888',
-			''
-		]
+				List: showImages,
+				wmls: [
+					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls4.png?sign=84e2ea5a6171caa96c4104947f385f8f&t=1720972858',
+					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls3.png?sign=3d4f10d6f8c3697f551cc844cd7c09c4&t=1720972870',
+					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls2.png?sign=028ad74ca2fc7ead6c05423e1f007d7f&t=1720972881',
+					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls1.png?sign=b56ca9bf8420dabfba052e2a475bf6b0&t=1720972888',
+					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls1.png?sign=b56ca9bf8420dabfba052e2a475bf6b0&t=1720972888',
+					''
+				]
 			}
 		},
-		onLoad() {
-		},
+		onLoad() {},
 		mounted() {
 			console.log(showImages);
 		},
@@ -58,19 +72,27 @@
 </script>
 
 <style>
-	.group--uni-group{
+	.swiper {
+		min-height: 150rpx;
+	}
+
+	.group--uni-group {
 		background-color: rgba(255, 255, 255, 0.9);
 	}
-	.uni-section__content-title{
-		font-size: 16px!important;
-		color: #fff!important;
+
+	.uni-section__content-title {
+		font-size: 16px !important;
+		color: black!important;
 	}
-	.uni-section-header{
-		padding: 0 10px!important;
+
+	.uni-section-header {
+		padding: 0 10px !important;
 	}
-	.section--uni-section{
+
+	.section--uni-section {
 		background-color: transparent;
 	}
+
 	.u-grid-item {
 		padding: 10px;
 	}
@@ -106,6 +128,7 @@
 	}
 
 	.text-area {
+		width: 100%;
 		height: calc(100% - 120px);
 		overflow-x: auto;
 		position: absolute;

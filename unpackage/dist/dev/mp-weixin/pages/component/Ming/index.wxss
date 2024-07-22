@@ -1,29 +1,48 @@
 
-.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+.swiper {
+	min-height: 150rpx;
 }
-.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
+.group--uni-group {
+	background-color: rgba(255, 255, 255, 0.9);
+}
+.uni-section__content-title {
+	font-size: 16px !important;
+	color: black!important;
+}
+.uni-section-header {
+	padding: 0 10px !important;
+}
+.section--uni-section {
+	background-color: transparent;
+}
+.u-grid-item {
+	padding: 10px;
+}
+.fui-avatar__img {
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+}
+.uni-col {
+	margin-bottom: 10px;
+}
+.card--uni-card {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .text-area {
-		display: flex;
-		justify-content: center;
+	width: 100%;
+	height: calc(100% - 120px);
+	overflow-x: auto;
+	position: absolute;
+	/* top: 200rpx; */
 }
-.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-}
-.head-bg{
-	  height: 100vh;
-/* 	  background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/ming.jpg?sign=9b22b6362a67c1fe1772920f02aa0571&t=1720705760');
-	  background-size: 100% 100%; */
+.head-bg {
+	height: 100%;
 }
 

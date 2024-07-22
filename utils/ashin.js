@@ -1,5 +1,6 @@
 export const showImages = [
-	{
+	{	
+		swiper:false,
 		name:'胡胡胡萝卜',
 		data:[
 			'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls4.png?sign=84e2ea5a6171caa96c4104947f385f8f&t=1720972858',
@@ -10,39 +11,30 @@ export const showImages = [
 			''
 		]
 	},
-	{
-		name:'怪怪怪怪兽',
+	{	
+		swiper:true,
+		name:'5525！',
 		data:[
-			'/static/pages/img/bar-gs.png',
-			''
-		]
-	},
-	{
-		name:'玛莎莎莎莎',
-		data:[
-			'/static/pages/img/bar-ms.png',
-			''
-		]
-	},
-	{
-		name:'阿信信信信',
-		data:[
-			'/static/pages/img/bar-as.png',
-			''
-		]
-	},
-	{
-		name:'石石石石头',
-		data:[
-			'/static/pages/img/bar-st.png',
-			''
-		]
-	},
-	{
-		name:'冠佑佑佑佑',
-		data:[
-			'/static/pages/img/bar-gy.png',
-			''
+			[
+				'/static/pages/img/bar-gs.png',
+				''
+			],
+			[
+				'/static/pages/img/bar-ms.png',
+				''
+			],
+			[
+				'/static/pages/img/bar-as.png',
+				''
+			],
+			[
+				'/static/pages/img/bar-st.png',
+				''
+			],
+			[
+				'/static/pages/img/bar-gy.png',
+				''
+			]
 		]
 	}
 ]

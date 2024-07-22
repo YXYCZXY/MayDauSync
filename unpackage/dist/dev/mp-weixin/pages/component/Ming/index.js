@@ -1,9 +1,9 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/component/Ming/index"],{
 
 /***/ 216:
-/*!**************************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/pages/component/Ming/index.vue ***!
-  \**************************************************************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/24517/Desktop/5525/MayDauSync/pages/component/Ming/index.vue ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -42,9 +42,9 @@ component.options.__file = "pages/component/Ming/index.vue"
 /***/ }),
 
 /***/ 217:
-/*!*********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/pages/component/Ming/index.vue?vue&type=template&id=2651ce03& ***!
-  \*********************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/24517/Desktop/5525/MayDauSync/pages/component/Ming/index.vue?vue&type=template&id=2651ce03& ***!
+  \************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -64,9 +64,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 218:
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/Administrator/Desktop/v1.00/MayDauSync/pages/component/Ming/index.vue?vue&type=template&id=2651ce03& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/24517/Desktop/5525/MayDauSync/pages/component/Ming/index.vue?vue&type=template&id=2651ce03& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -77,6 +77,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    uniCard: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 321))
+    },
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function () {
   var _vm = this
   var _h = _vm.$createElement
@@ -91,9 +114,9 @@ render._withStripped = true
 /***/ }),
 
 /***/ 219:
-/*!***************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/pages/component/Ming/index.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** C:/Users/24517/Desktop/5525/MayDauSync/pages/component/Ming/index.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -107,14 +130,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 220:
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--13-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/Administrator/Desktop/v1.00/MayDauSync/pages/component/Ming/index.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--13-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/24517/Desktop/5525/MayDauSync/pages/component/Ming/index.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -129,23 +152,234 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var app = getApp();
 var _default = {
   data: function data() {
     return {
-      title: 'Hello'
+      searching: false,
+      devicesList: [],
+      list_height: ''
     };
   },
-  onLoad: function onLoad() {},
-  methods: {}
+  options: {
+    styleIsolation: 'shared'
+  },
+  onLoad: function onLoad(options) {
+    var that = this;
+    var list_height = (app.globalData.SystemInfo.windowHeight - 50) * (750 / app.globalData.SystemInfo.windowWidth) - 60;
+    that.setData({
+      list_height: list_height
+    });
+    uni.onBluetoothAdapterStateChange(function (res) {
+      console.log(res);
+      that.setData({
+        searching: res.discovering
+      });
+      if (!res.available) {
+        that.setData({
+          searching: false
+        });
+      }
+    });
+    uni.onBluetoothDeviceFound(function (devices) {
+      //剔除重复设备，兼容不同设备API的不同返回值
+      var isnotexist = true;
+      if (devices.deviceId) {
+        if (devices.advertisData) {
+          devices.advertisData = app.globalData.buf2hex(devices.advertisData);
+        } else {
+          devices.advertisData = '';
+        }
+        console.log(devices);
+        for (var i = 0; i < that.devicesList.length; i++) {
+          if (devices.deviceId == that.devicesList[i].deviceId) {
+            isnotexist = false;
+          }
+        }
+        if (isnotexist) {
+          that.devicesList.push(devices);
+        }
+      } else if (devices.devices) {
+        if (devices.devices[0].advertisData) {
+          devices.devices[0].advertisData = app.globalData.buf2hex(devices.devices[0].advertisData);
+        } else {
+          devices.devices[0].advertisData = '';
+        }
+        console.log(devices.devices[0]);
+        for (var i = 0; i < that.devicesList.length; i++) {
+          if (devices.devices[0].deviceId == that.devicesList[i].deviceId) {
+            isnotexist = false;
+          }
+        }
+        if (isnotexist) {
+          that.devicesList.push(devices.devices[0]);
+        }
+      } else if (devices[0]) {
+        if (devices[0].advertisData) {
+          devices[0].advertisData = app.globalData.buf2hex(devices[0].advertisData);
+        } else {
+          devices[0].advertisData = '';
+        }
+        console.log(devices[0]);
+        for (var i = 0; i < devices_list.length; i++) {
+          if (devices[0].deviceId == that.devicesList[i].deviceId) {
+            isnotexist = false;
+          }
+        }
+        if (isnotexist) {
+          that.devicesList.push(devices[0]);
+        }
+      }
+      that.setData({
+        devicesList: that.devicesList
+      });
+    });
+  },
+  onReady: function onReady() {},
+  onShow: function onShow() {},
+  onHide: function onHide() {
+    var that = this;
+    that.setData({
+      devicesList: []
+    });
+    if (this.searching) {
+      uni.stopBluetoothDevicesDiscovery({
+        success: function success(res) {
+          console.log(res);
+          that.setData({
+            searching: false
+          });
+        }
+      });
+    }
+  },
+  methods: {
+    Search: function Search() {
+      var that = this;
+      if (!that.searching) {
+        uni.closeBluetoothAdapter({
+          complete: function complete(res) {
+            console.log(res);
+            uni.openBluetoothAdapter({
+              success: function success(res) {
+                console.log(res);
+                uni.getBluetoothAdapterState({
+                  success: function success(res) {
+                    console.log(res);
+                  }
+                });
+                uni.startBluetoothDevicesDiscovery({
+                  allowDuplicatesKey: false,
+                  success: function success(res) {
+                    console.log(res);
+                    that.setData({
+                      searching: true,
+                      devicesList: []
+                    });
+                  }
+                });
+              },
+              fail: function fail(res) {
+                console.log(res);
+                uni.showModal({
+                  title: '提示',
+                  content: '请检查手机蓝牙是否打开',
+                  showCancel: false,
+                  success: function success(res) {
+                    that.setData({
+                      searching: false
+                    });
+                  }
+                });
+              }
+            });
+          }
+        });
+      } else {
+        uni.stopBluetoothDevicesDiscovery({
+          success: function success(res) {
+            console.log(res);
+            that.setData({
+              searching: false
+            });
+          }
+        });
+      }
+    },
+    Connect: function Connect(e) {
+      var that = this;
+      var advertisData;
+      var name;
+      console.log(e.currentTarget.id);
+      for (var i = 0; i < that.devicesList.length; i++) {
+        if (e.currentTarget.id == that.devicesList[i].deviceId) {
+          name = that.devicesList[i].name;
+          advertisData = that.devicesList[i].advertisData;
+        }
+      }
+      uni.stopBluetoothDevicesDiscovery({
+        success: function success(res) {
+          console.log(res);
+          that.setData({
+            searching: false
+          });
+        }
+      });
+      uni.showLoading({
+        title: '连接蓝牙设备中...'
+      });
+      uni.createBLEConnection({
+        deviceId: e.currentTarget.id,
+        success: function success(res) {
+          console.log(res);
+          uni.hideLoading();
+          uni.showToast({
+            title: '连接成功',
+            icon: 'success',
+            duration: 1000
+          });
+          uni.navigateTo({
+            url: '../device/device?connectedDeviceId=' + e.currentTarget.id + '&name=' + name
+          });
+        },
+        fail: function fail(res) {
+          console.log(res);
+          uni.hideLoading();
+          uni.showModal({
+            title: '提示',
+            content: '连接失败',
+            showCancel: false
+          });
+        }
+      });
+    }
+  }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 
 /***/ 221:
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/v1.00/MayDauSync/pages/component/Ming/index.vue?vue&type=style&index=0&lang=css& ***!
-  \***********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/24517/Desktop/5525/MayDauSync/pages/component/Ming/index.vue?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -159,9 +393,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 222:
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/Administrator/Desktop/v1.00/MayDauSync/pages/component/Ming/index.vue?vue&type=style&index=0&lang=css& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/24517/Desktop/5525/MayDauSync/pages/component/Ming/index.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
