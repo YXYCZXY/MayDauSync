@@ -106,16 +106,14 @@
 							uni.notifyBLECharacteristicValueChange({
 								state: true,
 								deviceId: deviceId,
-								serviceId: res.services[0].uuid,
+								serviceId: app.globalData.serviceId,
 								characteristicId: res.characteristics[0].uuid,
 								success: function(res) {
-									console.log('启用notify成功：' + res
-										.characteristics[0].uuid);
+									console.log('启用notify成功');
 									console.log(JSON.stringify(res));
 								},
 								fail: function() {
-									console.log('开启notify失败' + res
-										.characteristics);
+									console.log('开启notify失败');
 								}
 							});
 						}

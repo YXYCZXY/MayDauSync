@@ -4,9 +4,9 @@
             <block v-for="(item, index) in devicesList" :key="index">
                 <view class="list-item" :id="item.deviceId" @tap="Connect">
                     <view style="display: flex; flex-direction: column; width: 80%">
-                        <text style="font-size: medium; word-break: break-all">设备名称: {{ item.name }}</text>
-                        <text style="font-size: x-small; color: gray; word-break: break-all">设备ID: {{ item.deviceId }}</text>
-                        <text style="font-size: x-small; color: gray; word-break: break-all">信号强度RSSI: {{ item.RSSI }}</text>
+                        <text style="font-size: medium; word-break: break-all;color: #fff;">设备名称: {{ item.name }}</text>
+                        <text style="font-size: x-small; color: #fff; word-break: break-all">设备ID: {{ item.deviceId }}</text>
+                        <text style="font-size: x-small; color: #fff; word-break: break-all">信号强度RSSI: {{ item.RSSI }}</text>
                     </view>
                     <image style="width: 36px; height: 36px" mode="aspectFit" src="/static/images/bluetooth.png"></image>
                 </view>
@@ -232,6 +232,8 @@ page {
 .container {
     padding: 0 30rpx 0 30rpx;
     align-items: center;
+	background-image: url('https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/bg/ble.jpg?sign=eadc73c038e302a5ba05f612130a870a&t=1721737460');
+	background-size: 100% 100%;
 }
 .list-item {
     display: flex;

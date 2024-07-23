@@ -30,7 +30,7 @@
 	"globalStyle": {
 		"backgroundTextStyle": "light",
 		"navigationBarBackgroundColor": "#fff",
-		"navigationBarTitleText": "WeChat",
+		"navigationBarTitleText": "MayDay Sync",
 		"navigationBarTextStyle": "black"
 	},
 	"subPackages": []
