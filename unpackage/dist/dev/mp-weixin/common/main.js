@@ -112,7 +112,13 @@ var _default = {
     var logs = uni.getStorageSync('logs') || [];
     logs.unshift(Date.now());
     uni.setStorageSync('logs', logs);
-
+    this.globalData.SystemInfo = uni.getSystemInfoSync();
+    this.globalData.userInfo = uni.getStorageSync('userInfo') || null;
+    this.globalData.SystemInfo = uni.getStorageSync('SystemInfo') || this.globalData.SystemInfo;
+    this.globalData.deviceId = uni.getStorageSync('deviceId') || null;
+    this.globalData.serviceId = uni.getStorageSync('serviceId') || null;
+    this.globalData.notifyUuid = uni.getStorageSync('notifyUuid') || null;
+    this.globalData.writeUuid = uni.getStorageSync('writeUuid') || null;
     // 登录
     uni.login({
       success: function success(res) {
@@ -141,7 +147,27 @@ var _default = {
     });
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    SystemInfo: {},
+    deviceId: null,
+    serviceId: null,
+    notifyUuid: null,
+    writeUuid: null,
+    buf2hex: function buf2hex(buffer) {
+      return Array.prototype.map.call(new Uint8Array(buffer), function (x) {
+        return ('00' + x.toString(16)).slice(-2);
+      }).join('');
+    },
+    buf2string: function buf2string(buffer) {
+      var arr = Array.prototype.map.call(new Uint8Array(buffer), function (x) {
+        return x;
+      });
+      var str = '';
+      for (var i = 0; i < arr.length; i++) {
+        str += String.fromCharCode(arr[i]);
+      }
+      return str;
+    }
   }
 };
 exports.default = _default;

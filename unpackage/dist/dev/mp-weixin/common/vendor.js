@@ -1557,7 +1557,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"zidingyitabbar","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"zidingyitabbar","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -8923,7 +8923,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"zidingyitabbar","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"zidingyitabbar","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8944,14 +8944,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"zidingyitabbar","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"zidingyitabbar","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"zidingyitabbar","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"zidingyitabbar","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9047,7 +9047,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"zidingyitabbar","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"zidingyitabbar","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -19916,7 +19916,15 @@ exports.default = _default;
 /* 181 */,
 /* 182 */,
 /* 183 */,
-/* 184 */
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */
 /*!************************************************************!*\
   !*** C:/Users/24517/Desktop/5525/MayDauSync/utils/util.js ***!
   \************************************************************/
@@ -19941,14 +19949,6 @@ module.exports = {
 };
 
 /***/ }),
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
 /* 193 */,
 /* 194 */,
 /* 195 */,
@@ -19962,7 +19962,15 @@ module.exports = {
 /* 203 */,
 /* 204 */,
 /* 205 */,
-/* 206 */
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */
 /*!*************************************************************!*\
   !*** C:/Users/24517/Desktop/5525/MayDauSync/utils/ashin.js ***!
   \*************************************************************/
@@ -19988,14 +19996,6 @@ var showImages = [{
 exports.showImages = showImages;
 
 /***/ }),
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
 /* 215 */,
 /* 216 */,
 /* 217 */,
@@ -20023,7 +20023,15 @@ exports.showImages = showImages;
 /* 239 */,
 /* 240 */,
 /* 241 */,
-/* 242 */
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */
 /*!**********************************************************************************************!*\
   !*** C:/Users/24517/Desktop/5525/MayDauSync/uni_modules/uview-ui/components/u-grid/props.js ***!
   \**********************************************************************************************/
@@ -20060,14 +20068,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 243 */,
-/* 244 */,
-/* 245 */,
-/* 246 */,
-/* 247 */,
-/* 248 */,
-/* 249 */,
-/* 250 */
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */,
+/* 257 */,
+/* 258 */
 /*!***************************************************************************************************!*\
   !*** C:/Users/24517/Desktop/5525/MayDauSync/uni_modules/uview-ui/components/u-grid-item/props.js ***!
   \***************************************************************************************************/
@@ -20099,21 +20107,28 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 251 */,
-/* 252 */,
-/* 253 */,
-/* 254 */,
-/* 255 */,
-/* 256 */,
-/* 257 */,
-/* 258 */,
 /* 259 */,
 /* 260 */,
 /* 261 */,
 /* 262 */,
 /* 263 */,
 /* 264 */,
-/* 265 */
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */
 /*!*************************************************************************************************!*\
   !*** C:/Users/24517/Desktop/5525/MayDauSync/uni_modules/uview-ui/components/u-overlay/props.js ***!
   \*************************************************************************************************/
@@ -20155,14 +20170,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 266 */,
-/* 267 */,
-/* 268 */,
-/* 269 */,
-/* 270 */,
-/* 271 */,
-/* 272 */,
-/* 273 */
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */
 /*!******************************************************************************************************!*\
   !*** C:/Users/24517/Desktop/5525/MayDauSync/uni_modules/uview-ui/components/u-loading-icon/props.js ***!
   \******************************************************************************************************/
@@ -20239,14 +20254,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 274 */,
-/* 275 */,
-/* 276 */,
-/* 277 */,
-/* 278 */,
-/* 279 */,
-/* 280 */,
-/* 281 */
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */
 /*!**********************************************************************************************!*\
   !*** C:/Users/24517/Desktop/5525/MayDauSync/uni_modules/uview-ui/components/u-icon/icons.js ***!
   \**********************************************************************************************/
@@ -20477,7 +20492,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 282 */
+/* 297 */
 /*!**********************************************************************************************!*\
   !*** C:/Users/24517/Desktop/5525/MayDauSync/uni_modules/uview-ui/components/u-icon/props.js ***!
   \**********************************************************************************************/
@@ -20584,14 +20599,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 283 */,
-/* 284 */,
-/* 285 */,
-/* 286 */,
-/* 287 */,
-/* 288 */,
-/* 289 */,
-/* 290 */
+/* 298 */,
+/* 299 */,
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */
 /*!*********************************************************************************************!*\
   !*** C:/Users/24517/Desktop/5525/MayDauSync/uni_modules/uview-ui/components/u-gap/props.js ***!
   \*********************************************************************************************/
@@ -20633,14 +20648,14 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 291 */,
-/* 292 */,
-/* 293 */,
-/* 294 */,
-/* 295 */,
-/* 296 */,
-/* 297 */,
-/* 298 */
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */
 /*!****************************************************************************************************!*\
   !*** C:/Users/24517/Desktop/5525/MayDauSync/uni_modules/uview-ui/components/u-transition/props.js ***!
   \****************************************************************************************************/
@@ -20682,7 +20697,7 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 299 */
+/* 314 */
 /*!*********************************************************************************************************!*\
   !*** C:/Users/24517/Desktop/5525/MayDauSync/uni_modules/uview-ui/components/u-transition/transition.js ***!
   \*********************************************************************************************************/
@@ -20699,7 +20714,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 67));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 69));
-var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 300));
+var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 315));
 // 定义一个一定时间后自动成功的promise，让调用nextTick方法处，进入下一个then方法
 var nextTick = function nextTick() {
   return new Promise(function (resolve) {
@@ -20791,7 +20806,7 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 300 */
+/* 315 */
 /*!***********************************************************************************************************!*\
   !*** C:/Users/24517/Desktop/5525/MayDauSync/uni_modules/uview-ui/components/u-transition/nvue.ani-map.js ***!
   \***********************************************************************************************************/

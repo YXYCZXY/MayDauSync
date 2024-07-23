@@ -24,7 +24,7 @@
 							<!-- <sync-card title="胡胡胡罗"  :src="listItem"></sync-card> -->
 						</u-grid-item>
 					</u-grid>
-					<u-toast ref="uToast" v-if="!item.swiper"/>
+					<u-toast ref="uToast" v-if="!item.swiper" />
 					<!-- 							<uni-row gutter="20" class="demo-uni-row" :width="nvueWidth">
 								<uni-col :span="8" v-for="url in wmls" :key="url">
 									<sync-card title="胡胡胡罗"  :src="url"></sync-card>
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+	const app = getApp();
 	import {
 		showImages
 	} from "@/utils/ashin.js";
@@ -46,8 +47,16 @@
 		options: {
 			styleIsolation: 'shared'
 		},
+		props: {
+			connected: {
+				type: Boolean,
+				default: true
+			}
+		},
 		data() {
 			return {
+				services: {},
+				connectedDeviceId: '',
 				List: showImages,
 				wmls: [
 					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls4.png?sign=84e2ea5a6171caa96c4104947f385f8f&t=1720972858',
@@ -59,13 +68,60 @@
 				]
 			}
 		},
-		onLoad() {},
 		mounted() {
 			console.log(showImages);
 		},
 		methods: {
 			submit(name, kind) {
 				console.log(name, kind);
+				this.Send(name, kind)
+			},
+			Send(name, kind) {
+				var that = this;
+				let deviceId = app.globalData.deviceId
+				let serviceId = app.globalData.serviceId
+				let writeUuid = app.globalData.writeUuid
+				if (that.connected) {
+					var buffer = new ArrayBuffer(kind.length);
+					var dataView = new Uint8Array(buffer);
+					for (var i = 0; i < kind.length; i++) {
+						dataView[i] = kind.charCodeAt(i);
+					}
+					uni.writeBLECharacteristicValue({
+						deviceId: deviceId,
+						serviceId: serviceId,
+						characteristicId: writeUuid,
+						value: buffer,
+						success: function(res) {
+							console.log('发送指令成功:' + res.errMsg);
+						},
+						fail: function(res) {
+							// fail
+							//console.log(that.data.services)
+							console.log('message发送失败:' + res.errMsg);
+							uni.showToast({
+								title: '数据发送失败，请稍后重试',
+								icon: 'none'
+							});
+						}
+					});
+				} else {
+					uni.showModal({
+						title: '提示',
+						content: '蓝牙已断开',
+						showCancel: false,
+						success: function(res) {
+							that.setData({
+								searching: false
+							});
+						}
+					});
+				}
+			}
+		},
+		watch: {
+			connected(val) {
+				console.log(val);
 			}
 		}
 	}
@@ -82,7 +138,7 @@
 
 	.uni-section__content-title {
 		font-size: 16px !important;
-		color: black!important;
+		color: black !important;
 	}
 
 	.uni-section-header {

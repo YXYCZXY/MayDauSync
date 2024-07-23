@@ -8,7 +8,7 @@
 			<component_Masa class="full-bg" />
 		</view>
 		<view class="main-wrap" v-if="!(currentTab == 2 ? false : true)">
-			<component_Ashin class="full-bg" />
+			<component_Ashin class="full-bg" :connected="connected" />
 		</view>
 		<view class="main-wrap" v-if="!(currentTab == 3 ? false : true)">
 			<component_Stone class="full-bg" />
@@ -32,13 +32,13 @@
 </template>
 
 <script>
+	const app = getApp();
 	import component_Monster from '@/pages/component/Monster/index';
 	import component_Masa from '@/pages/component/Masa/index';
 	import component_Ashin from '@/pages/component/Ashin/index';
 	import component_Stone from '@/pages/component/Stone/index';
 	import component_Ming from '@/pages/component/Ming/index';
 
-	let app = getApp();
 	export default {
 		components: {
 			component_Monster,
@@ -49,8 +49,9 @@
 		},
 		data() {
 			return {
-				currentTab: 4,
-				className: 'head-bg-gy',
+				connected: true,
+				currentTab: 2,
+				className: 'head-bg-as',
 				items: [{
 						iconPath: '/static/pages/img/bar-gs.png',
 						selectedIconPath: '/static/pages/img/bar-gs.png',
@@ -84,7 +85,50 @@
 				]
 			};
 		},
-		onLoad: function(option) {},
+		onLoad: function(options) {
+			let deviceId = app.globalData.deviceId
+			var that = this;
+			console.log(options);
+			uni.getBLEDeviceServices({
+				deviceId: deviceId,
+				success: function(res) {
+					console.log(res.services);
+					app.globalData.serviceId = res.services[0].uuid;
+					uni.setStorageSync('serviceId', res.services[0].uuid);
+					uni.getBLEDeviceCharacteristics({
+						deviceId: deviceId,
+						serviceId: res.services[0].uuid,
+						success: function(res) {
+							app.globalData.writeUuid = res.characteristics[1].uuid;
+							uni.setStorageSync('writeUuid', res.characteristics[1].uuid);
+							app.globalData.notifyUuid = res.characteristics[0].uuid;
+							uni.setStorageSync('notifyUuid', res.characteristics[0].uuid);
+							uni.notifyBLECharacteristicValueChange({
+								state: true,
+								deviceId: deviceId,
+								serviceId: res.services[0].uuid,
+								characteristicId: res.characteristics[0].uuid,
+								success: function(res) {
+									console.log('启用notify成功：' + res
+										.characteristics[0].uuid);
+									console.log(JSON.stringify(res));
+								},
+								fail: function() {
+									console.log('开启notify失败' + res
+										.characteristics);
+								}
+							});
+						}
+					});
+				}
+			});
+			uni.onBLEConnectionStateChange(function(res) {
+				console.log(res.connected);
+				that.setData({
+					connected: res.connected
+				});
+			});
+		},
 		methods: {
 			swichNav: function(e) {
 				console.log(e);

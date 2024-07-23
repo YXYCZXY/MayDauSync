@@ -7,7 +7,7 @@
 }
 .uni-section__content-title {
 	font-size: 16px !important;
-	color: black!important;
+	color: black !important;
 }
 .uni-section-header {
 	padding: 0 10px !important;
