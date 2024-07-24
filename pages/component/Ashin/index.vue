@@ -3,36 +3,27 @@
 		<view class="text-area">
 			<uni-section :title="item.name" type="line" v-for="item in List" :key="item.name">
 				<uni-group mode="card">
-					<swiper :indicator-dots="true" class="swiper" v-if="item.swiper">
+					<swiper :indicator-dots="true" :style="{height: getSwiperHeight(item.data)}"  v-if="item.swiper">
 						<swiper-item v-for="(valueItem,index) in item.data" :key="index">
 							<u-grid :border="true" col="3">
-								<!-- 注意wmls这个数组一定要是偶数 偶数的话效果会好看些 -->
-								<u-grid-item v-for="(listItem,listIndex) in valueItem" :key="listIndex"
+								<u-grid-item v-for="(listItem,listIndex) in valueItem.data" :key="listIndex"
 									@click="submit('aaaa',listItem)">
 									<image class="fui-avatar__img" :src="listItem"></image>
-									<!-- <sync-card title="胡胡胡罗"  :src="listItem"></sync-card> -->
 								</u-grid-item>
 							</u-grid>
 							<u-toast ref="uToast" />
 						</swiper-item>
 					</swiper>
+					
 					<u-grid :border="true" col="3" v-if="!item.swiper">
-						<!-- 注意wmls这个数组一定要是偶数 偶数的话效果会好看些 -->
 						<u-grid-item v-for="(listItem,listIndex) in item.data" :key="listIndex"
 							@click="submit('aaaa',listItem)">
 							<image class="fui-avatar__img" :src="listItem"></image>
-							<!-- <sync-card title="胡胡胡罗"  :src="listItem"></sync-card> -->
 						</u-grid-item>
 					</u-grid>
 					<u-toast ref="uToast" v-if="!item.swiper" />
-					<!-- 							<uni-row gutter="20" class="demo-uni-row" :width="nvueWidth">
-								<uni-col :span="8" v-for="url in wmls" :key="url">
-									<sync-card title="胡胡胡罗"  :src="url"></sync-card>
-								</uni-col>
-							</uni-row> -->
 				</uni-group>
 			</uni-section>
-
 		</view>
 		<TabBar class="bom-tabbar" :pagePath="'/pages/Ashin/index'"></TabBar>
 	</view>
@@ -58,13 +49,11 @@
 				services: {},
 				connectedDeviceId: '',
 				List: showImages,
-				wmls: [
-					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls4.png?sign=84e2ea5a6171caa96c4104947f385f8f&t=1720972858',
-					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls3.png?sign=3d4f10d6f8c3697f551cc844cd7c09c4&t=1720972870',
-					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls2.png?sign=028ad74ca2fc7ead6c05423e1f007d7f&t=1720972881',
-					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls1.png?sign=b56ca9bf8420dabfba052e2a475bf6b0&t=1720972888',
-					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls1.png?sign=b56ca9bf8420dabfba052e2a475bf6b0&t=1720972888',
-					''
+				wmls:[
+					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/1.jpg?sign=585032558758e71f002bdfe71273d29d&t=1721829577',
+					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/2.jpg?sign=c18b7c83cd3758958d25c70de8521922&t=1721829608',
+					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/3.jpg?sign=f9223ea8654ea2d7d1ff3db491710975&t=1721829623',
+					'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/4.jpg?sign=bd26602e9274489bec8727907dcc8903&t=1721829633'
 				]
 			}
 		},
@@ -96,8 +85,6 @@
 							console.log('发送指令成功:' + res.errMsg);
 						},
 						fail: function(res) {
-							// fail
-							//console.log(that.data.services)
 							console.log('message发送失败:' + res.errMsg);
 							uni.showToast({
 								title: '数据发送失败，请稍后重试',
@@ -117,6 +104,24 @@
 						}
 					});
 				}
+			},
+			getSwiperHeight(itemCount) {
+				console.log(itemCount);
+				let maxDataItem = null;
+				let maxDataCount = 0;
+			
+				itemCount.forEach(item => {
+					if (item.data.length > maxDataCount) {
+						maxDataItem = item;
+						maxDataCount = item.data.length;
+					}
+				});
+					
+				const baseHeight = 150; // base height in rpx
+				const additionalHeight = 150; // height per item in rpx
+				const rows = Math.ceil(maxDataCount / 3); // 3 items per row
+				console.log(itemCount,rows);
+				return `${baseHeight + (rows * additionalHeight)}rpx`;
 			}
 		},
 		watch: {
@@ -188,7 +193,6 @@
 		height: calc(100% - 120px);
 		overflow-x: auto;
 		position: absolute;
-		/* top: 200rpx; */
 	}
 
 	.title {

@@ -1,12 +1,6 @@
 {
 	"pages": [
 		{
-			"path": "pages/search/search",
-			"style": {
-				"usingComponents": {}
-			}
-		},
-		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationStyle": "custom",
@@ -17,6 +11,12 @@
 					"component_Stone": "/pages/component/Stone/index",
 					"component_Ming": "/pages/component/Ming/index"
 				}
+			}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"usingComponents": {}
 			}
 		},
 		{

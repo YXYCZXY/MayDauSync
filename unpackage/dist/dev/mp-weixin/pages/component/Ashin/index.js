@@ -116,6 +116,22 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var l0 = _vm.__map(_vm.List, function (item, __i0__) {
+    var $orig = _vm.__get_orig(item)
+    var m0 = item.swiper ? _vm.getSwiperHeight(item.data) : null
+    return {
+      $orig: $orig,
+      m0: m0,
+    }
+  })
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        l0: l0,
+      },
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -187,15 +203,6 @@ var _ashin = __webpack_require__(/*! @/utils/ashin.js */ 214);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 var app = getApp();
 var _default = {
@@ -213,7 +220,7 @@ var _default = {
       services: {},
       connectedDeviceId: '',
       List: _ashin.showImages,
-      wmls: ['https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls4.png?sign=84e2ea5a6171caa96c4104947f385f8f&t=1720972858', 'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls3.png?sign=3d4f10d6f8c3697f551cc844cd7c09c4&t=1720972870', 'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls2.png?sign=028ad74ca2fc7ead6c05423e1f007d7f&t=1720972881', 'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls1.png?sign=b56ca9bf8420dabfba052e2a475bf6b0&t=1720972888', 'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/wmls1.png?sign=b56ca9bf8420dabfba052e2a475bf6b0&t=1720972888', '']
+      wmls: ['https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/1.jpg?sign=585032558758e71f002bdfe71273d29d&t=1721829577', 'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/2.jpg?sign=c18b7c83cd3758958d25c70de8521922&t=1721829608', 'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/3.jpg?sign=f9223ea8654ea2d7d1ff3db491710975&t=1721829623', 'https://6d61-maydaysync-2gaijzhh7553fabf-1327815928.tcb.qcloud.la/maydayimgs/images/Ashin/wmls/4.jpg?sign=bd26602e9274489bec8727907dcc8903&t=1721829633']
     };
   },
   mounted: function mounted() {
@@ -244,8 +251,6 @@ var _default = {
             console.log('发送指令成功:' + res.errMsg);
           },
           fail: function fail(res) {
-            // fail
-            //console.log(that.data.services)
             console.log('message发送失败:' + res.errMsg);
             uni.showToast({
               title: '数据发送失败，请稍后重试',
@@ -265,6 +270,22 @@ var _default = {
           }
         });
       }
+    },
+    getSwiperHeight: function getSwiperHeight(itemCount) {
+      console.log(itemCount);
+      var maxDataItem = null;
+      var maxDataCount = 0;
+      itemCount.forEach(function (item) {
+        if (item.data.length > maxDataCount) {
+          maxDataItem = item;
+          maxDataCount = item.data.length;
+        }
+      });
+      var baseHeight = 150; // base height in rpx
+      var additionalHeight = 150; // height per item in rpx
+      var rows = Math.ceil(maxDataCount / 3); // 3 items per row
+      console.log(itemCount, rows);
+      return "".concat(baseHeight + rows * additionalHeight, "rpx");
     }
   },
   watch: {

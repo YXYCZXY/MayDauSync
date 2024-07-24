@@ -48,7 +48,6 @@
 	height: calc(100% - 120px);
 	overflow-x: auto;
 	position: absolute;
-	/* top: 200rpx; */
 }
 .title {
 	font-size: 36rpx;
